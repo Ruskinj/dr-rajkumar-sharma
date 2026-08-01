@@ -497,6 +497,69 @@ footer small{
     display:none;
   }
 }
+  /* NEWS & UPDATES */
+
+.news-grid{
+  max-width:1100px;
+  margin:35px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.news-card{
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  border:1px solid #e5e9ef;
+  box-shadow:0 10px 30px rgba(0,0,0,.07);
+  transition:.3s;
+}
+
+.news-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.news-date{
+  display:inline-block;
+  background:#fff0e5;
+  color:#ef7200;
+  font-size:13px;
+  font-weight:800;
+  padding:6px 12px;
+  border-radius:20px;
+  margin-bottom:15px;
+}
+
+.news-card h3{
+  color:#064f8c;
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.news-card p{
+  color:#667085;
+  font-size:15px;
+  margin-bottom:18px;
+}
+
+.news-btn{
+  color:#064f8c;
+  font-weight:800;
+  text-decoration:none;
+}
+
+@media(max-width:700px){
+  .news-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .news-card{
+    padding:20px;
+  }
+}
 </style>
 </head>
 
@@ -747,24 +810,40 @@ footer small{
   <div class="section-title">
     <span>नवीनतम</span>
     <h2>समाचार एवं अपडेट</h2>
+    <p>नवलगढ़ क्षेत्र से जनसंपर्क, विकास एवं कार्यक्रमों की नवीनतम जानकारी</p>
   </div>
 
-  <div class="cards">
+  <div class="news-grid">
 
-    <div class="card">
-      <h3>📰 समाचार</h3>
-      <p>क्षेत्र और जनहित से संबंधित नवीनतम समाचार यहाँ प्रकाशित किए जा सकते हैं।</p>
-    </div>
+    <article class="news-card">
+      <div class="news-date">01 अगस्त 2026</div>
+      <h3>📰 नवीनतम समाचार</h3>
+      <p>
+        नवलगढ़ क्षेत्र एवं जनहित से जुड़ी नवीनतम गतिविधियों और
+        महत्वपूर्ण समाचारों की जानकारी यहाँ उपलब्ध होगी।
+      </p>
+      <a href="#" class="news-btn">पूरा पढ़ें →</a>
+    </article>
 
-    <div class="card">
-      <h3>📅 कार्यक्रम</h3>
-      <p>आगामी जनसंपर्क कार्यक्रम, बैठक एवं अन्य आयोजनों की जानकारी।</p>
-    </div>
+    <article class="news-card">
+      <div class="news-date">आगामी कार्यक्रम</div>
+      <h3>📅 जनसंपर्क एवं कार्यक्रम</h3>
+      <p>
+        आगामी जनसंपर्क कार्यक्रम, बैठक एवं सार्वजनिक आयोजनों
+        की जानकारी यहाँ अपडेट की जाएगी।
+      </p>
+      <a href="#" class="news-btn">विवरण देखें →</a>
+    </article>
 
-    <div class="card">
-      <h3>📄 प्रेस अपडेट</h3>
-      <p>महत्वपूर्ण वक्तव्य, प्रेस नोट और सार्वजनिक सूचनाएँ यहाँ उपलब्ध होंगी।</p>
-    </div>
+    <article class="news-card">
+      <div class="news-date">नवलगढ़</div>
+      <h3>🏗️ विकास कार्य</h3>
+      <p>
+        क्षेत्र के विकास, स्वास्थ्य, शिक्षा एवं आधारभूत सुविधाओं
+        से संबंधित जानकारी एक ही स्थान पर।
+      </p>
+      <a href="#projects" class="news-btn">विकास कार्य देखें →</a>
+    </article>
 
   </div>
 
