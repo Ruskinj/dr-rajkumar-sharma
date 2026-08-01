@@ -560,6 +560,52 @@ footer small{
     padding:20px;
   }
 }
+  .news-popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.70);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.news-content{
+    position:relative;
+    width:100%;
+    max-width:650px;
+    max-height:85vh;
+    overflow-y:auto;
+    background:#fff;
+    border-radius:24px;
+    padding:35px 25px;
+}
+
+.news-content h2{
+    color:#064f8c;
+    margin:12px 0 18px;
+}
+
+.news-content p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.news-close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    border:0;
+    background:none;
+    font-size:38px;
+    cursor:pointer;
+}
+
+.news-popup .news-date{
+    color:#f47b00;
+    font-weight:700;
+}
 </style>
 </head>
 
@@ -822,7 +868,7 @@ footer small{
         नवलगढ़ क्षेत्र एवं जनहित से जुड़ी नवीनतम गतिविधियों और
         महत्वपूर्ण समाचारों की जानकारी यहाँ उपलब्ध होगी।
       </p>
-      <a href="#" class="news-btn">पूरा पढ़ें →</a>
+      <a href="javascript:void(0)" class="news-btn" onclick="openNews()">पूरा पढ़ें →</a>
     </article>
 
     <article class="news-card">
@@ -864,7 +910,25 @@ footer small{
   </p>
 
 </section>
+<div id="newsPopup" class="news-popup">
 
+  <div class="news-content">
+
+    <button class="news-close" onclick="closeNews()">×</button>
+
+    <div class="news-date">01 अगस्त 2026</div>
+
+    <h2>📰 नवीनतम समाचार</h2>
+
+    <p>
+      नवलगढ़ क्षेत्र एवं जनहित से जुड़ी नवीनतम गतिविधियों,
+      विकास कार्यों और महत्वपूर्ण समाचारों की विस्तृत जानकारी
+      यहाँ प्रकाशित की जाएगी।
+    </p>
+
+  </div>
+
+</div>
 
 <footer>
   <strong>डॉ. राजकुमार शर्मा</strong><br>
@@ -926,6 +990,15 @@ document.getElementById("galleryViewer").addEventListener("click", function(e){
     closeGallery();
   }
 });
+  function openNews(){
+    document.getElementById("newsPopup").style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+function closeNews(){
+    document.getElementById("newsPopup").style.display = "none";
+    document.body.style.overflow = "";
+}
 </script>
 </body>
 </html>
