@@ -889,6 +889,7 @@ footer small{
         से संबंधित जानकारी एक ही स्थान पर।
       </p>
       <a href="#projects" class="news-btn">विकास कार्य देखें →</a>
+  
     </article>
 
   </div>
@@ -910,25 +911,7 @@ footer small{
   </p>
 
 </section>
-<div id="newsPopup" class="news-popup">
 
-  <div class="news-content">
-
-    <button class="news-close" onclick="closeNews()">×</button>
-
-    <div class="news-date">01 अगस्त 2026</div>
-
-    <h2>📰 नवीनतम समाचार</h2>
-
-    <p>
-      नवलगढ़ क्षेत्र एवं जनहित से जुड़ी नवीनतम गतिविधियों,
-      विकास कार्यों और महत्वपूर्ण समाचारों की विस्तृत जानकारी
-      यहाँ प्रकाशित की जाएगी।
-    </p>
-
-  </div>
-
-</div>
 <div id="newsPopup" class="news-popup">
 
   <div class="news-content">
@@ -1048,13 +1031,15 @@ document.getElementById("galleryViewer").addEventListener("click", function(e){
   }
 });
   function openNews(){
-    document.getElementById("newsPopup").style.display = "flex";
-    document.body.style.overflow = "hidden";
+  const popup = document.getElementById("newsPopup");
+  popup.style.display = "flex";
+  document.body.style.overflow = "hidden";
 }
 
 function closeNews(){
-    document.getElementById("newsPopup").style.display = "none";
-    document.body.style.overflow = "";
+  const popup = document.getElementById("newsPopup");
+  popup.style.display = "none";
+  document.body.style.overflow = "";
 }
 </script>
 </body>
