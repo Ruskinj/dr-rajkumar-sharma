@@ -1,114 +1,628 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>डॉ. राजकुमार शर्मा | जनसेवा • विकास • नवलगढ़</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;color:#172033;background:#fafafa}
-nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #eee;padding:13px 6%;display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:900;color:#123b78}.links a{color:#333;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{min-height:72vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:55px 7%;background:linear-gradient(135deg,#fff 0%,#eef5ff 55%,#fff4e8 100%)}
-.hero h1{font-size:clamp(38px,6vw,76px);line-height:1;margin:0 0 15px;color:#10366f}.hero h2{font-size:22px;margin:0 0 12px}.hero p{font-size:18px;color:#586274}
-.hero img{width:100%;height:560px;object-fit:cover;object-position:top;border-radius:28px;box-shadow:0 20px 60px #0002}
-.btn{display:inline-block;margin:14px 8px 0 0;padding:12px 20px;border-radius:999px;background:#123b78;color:white;text-decoration:none;font-weight:700}.btn.alt{background:#ef7b22}
-section{padding:65px 7%}.title{text-align:center;margin-bottom:32px}.title h2{font-size:34px;margin:0;color:#123b78}.title p{color:#687386}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;padding:24px;border-radius:18px;box-shadow:0 8px 30px #0000000c}.card h3{color:#123b78}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery a{display:block}.gallery img{width:100%;height:290px;object-fit:cover;border-radius:14px;transition:.2s}.gallery img:hover{transform:scale(1.02)}
-.timeline{max-width:850px;margin:auto}.item{border-left:4px solid #ef7b22;padding:4px 0 24px 20px}.item h3{margin:0;color:#123b78}
-footer{background:#0e2d57;color:#fff;text-align:center;padding:35px}
-.note{font-size:13px;opacity:.75}
-@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:35px}.hero img{height:430px;margin-top:28px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:230px}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.admin-demo{max-width:950px;margin:auto;background:#fff;border-radius:22px;padding:28px;box-shadow:0 10px 35px #00000010}
-.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.admin-box{border:1px solid #e4e8ef;border-radius:15px;padding:18px}
-.admin-box b{color:#123b78}.status{display:inline-block;background:#eef5ff;color:#123b78;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700}
-@media(max-width:800px){.admin-grid{grid-template-columns:1fr}}
+<title>डॉ. राजकुमार शर्मा | जनसेवा • विकास • नवलगढ़</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  color:#172033;
+  background:#fff;
+  line-height:1.6;
+}
+
+/* HEADER */
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid #e7eaf0;
+  padding:15px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  font-size:22px;
+  font-weight:900;
+  color:#064f8c;
+}
+
+.links{
+  display:flex;
+  gap:20px;
+}
+
+.links a{
+  text-decoration:none;
+  color:#26384a;
+  font-weight:700;
+}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  padding:65px 7%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+  background:
+  linear-gradient(135deg,#f6fbff,#edf5ff 60%,#fff6ec);
+}
+
+.tag{
+  color:#ef7200;
+  font-weight:900;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.hero h1{
+  color:#064f8c;
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.1;
+  margin:8px 0 14px;
+}
+
+.hero h2{
+  color:#064f8c;
+  font-size:clamp(21px,3vw,32px);
+  margin-bottom:20px;
+}
+
+.hero p{
+  color:#5e6977;
+  font-size:20px;
+  max-width:700px;
+}
+
+.hero img{
+  width:100%;
+  max-height:650px;
+  object-fit:cover;
+  border-radius:35px;
+  box-shadow:0 25px 55px rgba(0,55,105,.18);
+}
+
+.btn{
+  display:inline-block;
+  margin:25px 10px 0 0;
+  padding:14px 25px;
+  border-radius:50px;
+  background:#075394;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+}
+
+.btn.orange{
+  background:#ef7200;
+}
+
+/* GENERAL SECTIONS */
+section{
+  padding:75px 7%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title span{
+  color:#ef7200;
+  font-weight:800;
+}
+
+.section-title h2{
+  color:#064f8c;
+  font-size:clamp(30px,4vw,46px);
+}
+
+/* ABOUT */
+.about{
+  background:#fff;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  padding:30px;
+  border-radius:22px;
+  background:#fff;
+  border:1px solid #e5e9ef;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.card h3{
+  color:#064f8c;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+/* JOURNEY */
+.journey{
+  background:#f5f9fd;
+}
+
+.timeline{
+  max-width:900px;
+  margin:auto;
+}
+
+.timeline-item{
+  position:relative;
+  padding:25px 25px 25px 35px;
+  margin-bottom:18px;
+  background:white;
+  border-left:5px solid #ef7200;
+  border-radius:0 18px 18px 0;
+  box-shadow:0 8px 25px rgba(0,0,0,.04);
+}
+
+.timeline-item h3{
+  color:#064f8c;
+}
+
+/* DEVELOPMENT */
+.projects{
+  background:#fff;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project{
+  background:linear-gradient(145deg,#064f8c,#0871bd);
+  color:#fff;
+  padding:28px;
+  min-height:180px;
+  border-radius:22px;
+}
+
+.project h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+/* GALLERY */
+.gallery-section{
+  background:#f5f9fd;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.gallery a{
+  display:block;
+}
+
+.gallery img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:17px;
+  display:block;
+  transition:.25s;
+}
+
+.gallery img:hover{
+  transform:scale(1.025);
+}
+
+/* VIDEO */
+.video-section{
+  background:#fff;
+}
+
+.video-box{
+  max-width:850px;
+  margin:auto;
+  padding:40px;
+  text-align:center;
+  background:#f5f9fd;
+  border-radius:25px;
+}
+
+.video-box h3{
+  color:#064f8c;
+  font-size:27px;
+}
+
+/* UPDATES */
+.updates{
+  background:#f5f9fd;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  background:linear-gradient(135deg,#063c6c,#075a9d);
+  color:#fff;
+}
+
+.contact h2{
+  font-size:38px;
+}
+
+.contact p{
+  max-width:700px;
+  margin:12px auto;
+  opacity:.9;
+}
+
+/* FOOTER */
+footer{
+  background:#042d50;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+}
+
+footer small{
+  opacity:.75;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  nav{
+    padding:14px 7%;
+  }
+
+  .brand{
+    font-size:20px;
+  }
+
+  .links{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:45px 7% 60px;
+    min-height:auto;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .hero img{
+    max-height:none;
+  }
+
+  section{
+    padding:60px 7%;
+  }
+
+  .cards,
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery img{
+    height:220px;
+  }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="brand">डॉ. राजकुमार शर्मा</div><div class="links"><a href="#about">परिचय</a><a href="#journey">राजनीतिक सफर</a><a href="#work">विकास कार्य</a><a href="#gallery">फोटो</a><a href="#videos">वीडियो</a><a href="#updates">अपडेट</a></div></nav>
+
+<nav>
+  <div class="brand">डॉ. राजकुमार शर्मा</div>
+
+  <div class="links">
+    <a href="#about">परिचय</a>
+    <a href="#journey">सार्वजनिक जीवन</a>
+    <a href="#projects">विकास कार्य</a>
+    <a href="#gallery">गैलरी</a>
+    <a href="#updates">अपडेट</a>
+  </div>
+</nav>
+
+
 <header class="hero">
+
   <div>
-    <div style="font-weight:800;color:#ef7b22;font-size:18px;">जनसेवा • विकास • नवलगढ़</div>
+    <div class="tag">जनसेवा • विकास • नवलगढ़</div>
+
     <h1>डॉ. राजकुमार शर्मा</h1>
-    <h2 style="color:#123b78;margin:8px 0;">पूर्व चिकित्सा मंत्री, राजस्थान सरकार</h2>
-    <p>जनता से जुड़ाव, क्षेत्र के विकास और जनहित के कार्यों से संबंधित जानकारी, तस्वीरें और वीडियो एक ही स्थान पर।</p>
+
+    <h2>पूर्व चिकित्सा मंत्री, राजस्थान सरकार</h2>
+
+    <p>
+      जनता से जुड़ाव, क्षेत्र के विकास और जनहित के कार्यों से संबंधित
+      जानकारी, तस्वीरें, कार्यक्रम और अपडेट एक ही स्थान पर।
+    </p>
 
     <a class="btn" href="#gallery">फोटो गैलरी</a>
-    <a class="btn" href="#videos">वीडियो देखें</a>
+    <a class="btn orange" href="#videos">वीडियो देखें</a>
   </div>
 
   <img src="profile.jpg" alt="डॉ. राजकुमार शर्मा">
+
 </header>
 
-<section id="about"><div class="title"><h2>डॉ. राजकुमार शर्मा</h2><p>सार्वजनिक जीवन • शिक्षा • नवलगढ़</p></div>
-<div class="cards">
-<div class="card"><h3>🎓 शिक्षा</h3><p>चुनावी शपथपत्रों में उनकी शैक्षणिक योग्यता Doctorate दर्ज है। 2013 के शपथपत्र-संकलन में राजस्थान विश्वविद्यालय, जयपुर से संस्कृत में Ph.D. का उल्लेख मिलता है।</p></div>
-<div class="card"><h3>🏛️ जनप्रतिनिधित्व</h3><p>नवलगढ़ विधानसभा क्षेत्र से 2008, 2013 और 2018 में लगातार निर्वाचित रहे। यह वेबसाइट उनके सार्वजनिक जीवन और क्षेत्र से जुड़े अभिलेखों को व्यवस्थित रूप से प्रस्तुत करने के लिए तैयार की जा रही है।</p></div>
-<div class="card"><h3>🤝 जनसंपर्क</h3><p>कार्यक्रमों, जनसंपर्क, विकास कार्यों, समाचारों, तस्वीरों और वीडियो का खोजने योग्य डिजिटल संग्रह इस वेबसाइट का मुख्य उद्देश्य है।</p></div>
-</div></section>
 
-<section id="journey" style="background:#fff"><div class="title"><h2>राजनीतिक सफर</h2><p>प्रमुख चुनावी पड़ाव</p></div>
-<div class="timeline">
-<div class="item"><h3>2008 — पहली विधानसभा जीत</h3><p>नवलगढ़ विधानसभा क्षेत्र से बहुजन समाज पार्टी (BSP) प्रत्याशी के रूप में निर्वाचित हुए। निर्वाचन रिकॉर्ड के अनुसार उन्हें 50,273 वोट मिले और जीत का अंतर 14,080 वोट रहा।</p></div>
-<div class="item"><h3>4 अप्रैल 2009 — कांग्रेस में शामिल</h3><p>राजस्थान के छह BSP विधायकों के साथ भारतीय राष्ट्रीय कांग्रेस (INC) में शामिल हुए।</p></div>
-<div class="item"><h3>2013 — नवलगढ़ से पुनः निर्वाचित</h3><p>2013 में निर्दलीय (IND) उम्मीदवार के रूप में चुनाव जीता। उपलब्ध चुनावी रिकॉर्ड में 76,845 वोट दर्ज हैं।</p></div>
-<div class="item"><h3>2018 — लगातार तीसरी जीत</h3><p>2018 में भारतीय राष्ट्रीय कांग्रेस (INC) प्रत्याशी के रूप में नवलगढ़ से विजयी रहे और 79,570 वोट प्राप्त किए।</p></div>
-<div class="item"><h3>2023 — विधानसभा चुनाव</h3><p>2023 में नवलगढ़ से कांग्रेस प्रत्याशी के रूप में चुनाव लड़ा। इस चुनाव से संबंधित विस्तृत परिणाम और दस्तावेज़ archive में जोड़े जाएंगे।</p></div>
-</div>
-<p style="max-width:900px;margin:10px auto 0;text-align:center;color:#687386;font-size:13px">चुनावी विवरण प्रकाशित/सार्वजनिक निर्वाचन रिकॉर्ड के आधार पर तैयार किया गया है।</p>
+<section id="about" class="about">
+
+  <div class="section-title">
+    <span>परिचय</span>
+    <h2>जनसेवा के प्रति समर्पण</h2>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🎓 शिक्षा</h3>
+      <p>
+        शिक्षा और सामाजिक जागरूकता को क्षेत्र के विकास की मजबूत नींव
+        मानते हुए जनहित के विषयों पर निरंतर सक्रियता।
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🏛️ जनप्रतिनिधित्व</h3>
+      <p>
+        नवलगढ़ क्षेत्र की जनता की समस्याओं, आवश्यकताओं और विकास से जुड़े
+        मुद्दों को प्राथमिकता।
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤝 जनसंपर्क</h3>
+      <p>
+        जनता के बीच रहकर संवाद, कार्यक्रमों में भागीदारी और क्षेत्र की
+        समस्याओं से सीधा जुड़ाव।
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
-<section id="work">
-<div class="title"><h2>नवलगढ़ का विकास</h2><p>सार्वजनिक स्रोतों से सत्यापित प्रमुख कार्य एवं स्वीकृतियाँ</p></div>
-<div class="cards">
-<div class="card"><h3>🏥 जिला अस्पताल, नवलगढ़</h3><p>2022 में उप-जिला अस्पताल को जिला अस्पताल में क्रमोन्नत करने की स्वीकृति हुई। उपलब्ध रिपोर्ट के अनुसार 50 अतिरिक्त बेड और 149 अतिरिक्त पद भी स्वीकृत किए गए।</p><small>स्थिति: स्वीकृति/क्रमोन्नयन</small></div>
-<div class="card"><h3>🏛️ मिनी सचिवालय</h3><p>2023 में नवलगढ़ में मिनी सचिवालय की स्थापना हेतु विस्तृत परियोजना प्रस्ताव को मंजूरी और लगभग ₹11 करोड़ की स्वीकृति की रिपोर्ट उपलब्ध है।</p><small>स्थिति: स्वीकृत परियोजना</small></div>
-<div class="card"><h3>🛣️ सड़क एवं आधारभूत संरचना</h3><p>नवलगढ़ क्षेत्र में विभिन्न सड़क परियोजनाओं और संपर्क मार्गों के लिए स्वीकृतियों का सार्वजनिक रिकॉर्ड उपलब्ध है। विस्तृत परियोजना सूची आगे जोड़ी जाएगी।</p></div>
-<div class="card"><h3>🏃 खेल एवं जनसुविधाएँ</h3><p>क्षेत्र में ओपन जिम, रनिंग ट्रैक तथा खेल सुविधाओं से जुड़े कार्यों का रिकॉर्ड संकलित किया जा रहा है।</p></div>
-<div class="card"><h3>🎓 शिक्षा</h3><p>सरकारी कॉलेज, उच्च शिक्षा और अन्य शैक्षणिक सुविधाओं से जुड़े कार्यों को दस्तावेज़ों के साथ अलग archive में जोड़ा जाएगा।</p></div>
-<div class="card"><h3>📚 विकास अभिलेख</h3><p>हर परियोजना के साथ वर्ष, लागत/स्वीकृति, स्थान, फोटो और उपलब्ध स्रोत जोड़ने के लिए यह वेबसाइट तैयार की जा रही है।</p></div>
-</div>
-<p style="max-width:900px;margin:28px auto 0;text-align:center;color:#687386;font-size:14px">नोट: वेबसाइट में केवल सत्यापित जानकारी प्रकाशित करने का लक्ष्य है। निर्माण, स्वीकृति और प्रस्ताव जैसी अलग-अलग स्थितियों को स्पष्ट रूप से दर्शाया जाएगा।</p>
+
+<section id="journey" class="journey">
+
+  <div class="section-title">
+    <span>सार्वजनिक जीवन</span>
+    <h2>राजनीतिक एवं जनसेवा यात्रा</h2>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>2008 — पहली विधानसभा जीत</h3>
+      <p>नवलगढ़ विधानसभा क्षेत्र से जनप्रतिनिधित्व की महत्वपूर्ण शुरुआत।</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>4 अप्रैल 2009 — कांग्रेस में शामिल</h3>
+      <p>सार्वजनिक एवं राजनीतिक जीवन में आगे की यात्रा।</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2013 — नवलगढ़ से पुनः निर्वाचित</h3>
+      <p>क्षेत्र की जनता के साथ जनसंपर्क और विकास कार्यों की निरंतरता।</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2018 — पुनः जनसमर्थन</h3>
+      <p>नवलगढ़ के विकास एवं जनहित के मुद्दों पर सक्रिय भूमिका।</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>राजस्थान सरकार</h3>
+      <p>चिकित्सा एवं स्वास्थ्य क्षेत्र से जुड़ी जिम्मेदारियों का निर्वहन।</p>
+    </div>
+
+  </div>
+
 </section>
 
-<section id="updates" style="background:#eef5ff">
-<div class="title"><h2>दस्तावेज़ एवं अपडेट</h2><p>भविष्य में यहाँ समाचार, सरकारी आदेश, प्रेस कटिंग और परियोजना अपडेट जोड़े जा सकेंगे</p></div>
-<div class="cards">
-<div class="card"><h3>📰 समाचार</h3><p>वर्ष और विषय के अनुसार खोजने योग्य समाचार संग्रह।</p></div>
-<div class="card"><h3>📄 सरकारी दस्तावेज़</h3><p>उपलब्ध स्वीकृतियाँ, आदेश और सार्वजनिक दस्तावेज़ एक जगह।</p></div>
-<div class="card"><h3>📅 कार्यक्रम</h3><p>जनसंपर्क, सभाओं और सार्वजनिक कार्यक्रमों का फोटो/वीडियो archive।</p></div>
-</div></section>
 
-<section id="gallery" style="background:#fff"><div class="title"><h2>Photo Gallery</h2><p>जनसंपर्क • कार्यक्रम • सार्वजनिक जीवन — तस्वीर पर टैप करके original image खोलें</p></div><div class="gallery">
-<a href="photo1.jpg" target="_blank"><img loading="lazy" src="photo1.jpg" alt="Gallery photo 1"></a>
-<a href="photo2.jpg" target="_blank"><img loading="lazy" src="photo2.jpg" alt="Gallery photo 2"></a>
-<a href="photo3.jpg" target="_blank"><img loading="lazy" src="photo3.jpg" alt="Gallery photo 3"></a>
-<a href="photo4.jpg" target="_blank"><img loading="lazy" src="photo4.jpg" alt="Gallery photo 4"></a>
-<a href="photo5.jpg" target="_blank"><img loading="lazy" src="photo5.jpg" alt="Gallery photo 5"></a>
-<a href="photo6.jpg" target="_blank"><img loading="lazy" src="photo6.jpg" alt="Gallery photo 6"></a>
-<a href="photo7.jpg" target="_blank"><img loading="lazy" src="photo7.jpg" alt="Gallery photo 7"></a>
-<a href="photo8.jpg" target="_blank"><img loading="lazy" src="photo8.jpg" alt="Gallery photo 8"></a>
-<a href="photo9.jpg" target="_blank"><img loading="lazy" src="photo9.jpg" alt="Gallery photo 9"></a>
-<a href="photo10.jpg" target="_blank"><img loading="lazy" src="photo10.jpg" alt="Gallery photo 10"></a>
-</div></section>
+<section id="projects" class="projects">
 
-<section id="videos"><div class="title"><h2>Video Gallery</h2><p>भाषण, कार्यक्रम और जनसंपर्क वीडियो</p></div>
-<div class="cards"><div class="card"><h3>▶ भाषण</h3><p>YouTube/Facebook वीडियो लिंक यहाँ जोड़े जाएंगे।</p></div><div class="card"><h3>▶ जनसंपर्क</h3><p>जनता के बीच कार्यक्रमों के वीडियो का संग्रह।</p></div><div class="card"><h3>▶ विशेष कार्यक्रम</h3><p>महत्वपूर्ण आयोजनों और पुराने वीडियो का डिजिटल अभिलेख।</p></div></div></section>
+  <div class="section-title">
+    <span>विकास</span>
+    <h2>प्रमुख विकास कार्य</h2>
+  </div>
 
-<section id="admin" style="background:#f5f7fb">
-<div class="title"><h2>Website Management</h2><p>अगले चरण के Admin Panel का प्रारंभिक ढाँचा</p></div>
-<div class="admin-demo">
-<div style="display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:20px"><div><h3 style="margin:0;color:#123b78">Admin Dashboard</h3><small>मोबाइल से वेबसाइट अपडेट करने के लिए</small></div><span class="status">Prototype</span></div>
-<div class="admin-grid">
-<div class="admin-box"><b>📷 Photo Manager</b><p>नई फोटो upload, title/category जोड़ना और gallery से हटाना।</p></div>
-<div class="admin-box"><b>▶ Video Manager</b><p>YouTube/Facebook video link और विवरण जोड़ना।</p></div>
-<div class="admin-box"><b>📰 News & Updates</b><p>नई खबर, प्रेस नोट और कार्यक्रम update publish करना।</p></div>
-<div class="admin-box"><b>🏗️ Development Projects</b><p>परियोजना का नाम, वर्ष, लागत, स्थिति, फोटो और विवरण जोड़ना।</p></div>
-</div>
-<p style="margin:20px 0 0;color:#687386;font-size:14px"><b>अगला technical चरण:</b> इसे वास्तविक login, database और image storage से जोड़ना होगा। उसके बाद बदलाव सीधे live website पर दिखाई देंगे।</p>
-</div></section>
+  <div class="project-grid">
 
-<footer><b>डॉ. राजकुमार शर्मा</b><p>जनसेवा • विकास • नवलगढ़</p><div class="note">प्रारंभिक वेबसाइट डेमो — प्रकाशित करने से पहले जीवनी, तिथियाँ, पद और संपर्क विवरण सत्यापित किए जाएँ।</div></footer>
-</body></html>
+    <div class="project">
+      <h3>🏥 स्वास्थ्य सुविधाएँ</h3>
+      <p>क्षेत्र में बेहतर चिकित्सा एवं स्वास्थ्य सेवाओं के विस्तार की दिशा में प्रयास।</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 शिक्षा</h3>
+      <p>उच्च शिक्षा एवं विद्यार्थियों के लिए शैक्षणिक सुविधाओं के विकास पर जोर।</p>
+    </div>
+
+    <div class="project">
+      <h3>🏢 प्रशासनिक सुविधाएँ</h3>
+      <p>जनता को सरकारी सेवाएँ अधिक सुविधाजनक रूप से उपलब्ध कराने की दिशा में कार्य।</p>
+    </div>
+
+    <div class="project">
+      <h3>🚌 परिवहन</h3>
+      <p>क्षेत्र की कनेक्टिविटी एवं सार्वजनिक परिवहन सुविधाओं को बेहतर बनाने के प्रयास।</p>
+    </div>
+
+    <div class="project">
+      <h3>🏟️ खेल सुविधाएँ</h3>
+      <p>युवाओं और खिलाड़ियों के लिए खेल संबंधी आधारभूत सुविधाओं को बढ़ावा।</p>
+    </div>
+
+    <div class="project">
+      <h3>🛣️ आधारभूत विकास</h3>
+      <p>सड़क, सार्वजनिक भवन एवं अन्य बुनियादी सुविधाओं के विकास से जुड़े प्रयास।</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="gallery" class="gallery-section">
+
+  <div class="section-title">
+    <span>तस्वीरें</span>
+    <h2>फोटो गैलरी</h2>
+  </div>
+
+  <div class="gallery">
+
+    <a href="photo1.jpg" target="_blank">
+      <img loading="lazy" src="photo1.jpg" alt="Gallery Photo 1">
+    </a>
+
+    <a href="photo2.jpg" target="_blank">
+      <img loading="lazy" src="photo2.jpg" alt="Gallery Photo 2">
+    </a>
+
+    <a href="photo3.jpg" target="_blank">
+      <img loading="lazy" src="photo3.jpg" alt="Gallery Photo 3">
+    </a>
+
+    <a href="photo4.jpg" target="_blank">
+      <img loading="lazy" src="photo4.jpg" alt="Gallery Photo 4">
+    </a>
+
+    <a href="photo5.jpg" target="_blank">
+      <img loading="lazy" src="photo5.jpg" alt="Gallery Photo 5">
+    </a>
+
+    <a href="photo6.jpg" target="_blank">
+      <img loading="lazy" src="photo6.jpg" alt="Gallery Photo 6">
+    </a>
+
+    <a href="photo7.jpg" target="_blank">
+      <img loading="lazy" src="photo7.jpg" alt="Gallery Photo 7">
+    </a>
+
+    <a href="photo8.jpg" target="_blank">
+      <img loading="lazy" src="photo8.jpg" alt="Gallery Photo 8">
+    </a>
+
+    <a href="photo9.jpg" target="_blank">
+      <img loading="lazy" src="photo9.jpg" alt="Gallery Photo 9">
+    </a>
+
+    <a href="photo10.jpg" target="_blank">
+      <img loading="lazy" src="photo10.jpg" alt="Gallery Photo 10">
+    </a>
+
+  </div>
+
+</section>
+
+
+<section id="videos" class="video-section">
+
+  <div class="section-title">
+    <span>मीडिया</span>
+    <h2>वीडियो गैलरी</h2>
+  </div>
+
+  <div class="video-box">
+    <h3>▶ भाषण एवं कार्यक्रम</h3>
+
+    <p>
+      जनसभाओं, कार्यक्रमों, विकास कार्यों और जनसंपर्क से संबंधित
+      वीडियो यहाँ जोड़े जा सकते हैं।
+    </p>
+  </div>
+
+</section>
+
+
+<section id="updates" class="updates">
+
+  <div class="section-title">
+    <span>नवीनतम</span>
+    <h2>समाचार एवं अपडेट</h2>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>📰 समाचार</h3>
+      <p>क्षेत्र और जनहित से संबंधित नवीनतम समाचार यहाँ प्रकाशित किए जा सकते हैं।</p>
+    </div>
+
+    <div class="card">
+      <h3>📅 कार्यक्रम</h3>
+      <p>आगामी जनसंपर्क कार्यक्रम, बैठक एवं अन्य आयोजनों की जानकारी।</p>
+    </div>
+
+    <div class="card">
+      <h3>📄 प्रेस अपडेट</h3>
+      <p>महत्वपूर्ण वक्तव्य, प्रेस नोट और सार्वजनिक सूचनाएँ यहाँ उपलब्ध होंगी।</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact">
+
+  <h2>डॉ. राजकुमार शर्मा</h2>
+
+  <p>
+    जनसेवा • विकास • नवलगढ़
+  </p>
+
+  <p>
+    जनता से संवाद और क्षेत्र के विकास से जुड़ी जानकारी के लिए
+    इस वेबसाइट पर नवीनतम अपडेट उपलब्ध रहेंगे।
+  </p>
+
+</section>
+
+
+<footer>
+  <strong>डॉ. राजकुमार शर्मा</strong><br>
+  <small>जनसेवा • विकास • नवलगढ़</small>
+</footer>
+
+</body>
+</html>
